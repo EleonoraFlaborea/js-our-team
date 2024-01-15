@@ -21,7 +21,7 @@ Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg
 */
 
-const team = document.getElementById('profile')
+const team = document.getElementById('team')
 
 //Creo l’array di oggetti
 const profile = [
@@ -62,11 +62,28 @@ const profile = [
     }
 ]
 //stampo in console tutti i nomi, ruoli e stringa foto
-for (let key in profile){
+/*for (let key in profile){
    console.log('Name: ',profile[key].name)
    console.log('Role: ',profile[key].role)
    console.log('Picture: ',profile[key].picture)
+}*/
+
+
+//stampo su DOM,tutto stringa
+let items= '';
+
+for (let i = 0; i < profile.length; i++){
+    const people = profile[i];
+    items += '<li>';
+    items += `<h4>NOME: ${people.name}</h4>`;
+    items += `<p>RUOLO: ${people.role}</p>`;
+    items += `<img>PICTURE: ${people.picture}</img>`;
+
+    items += '</li>';
 }
+
+team.innerHTML = items;
+
 
 //TODO:
 /*
