@@ -23,6 +23,7 @@ Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg
 
 const team = document.getElementById('team')
 
+
 //Creo l’array di oggetti
 const profile = [
     {
@@ -77,7 +78,10 @@ for (let i = 0; i < profile.length; i++){
     items += '<li>';
     items += `<h4>NOME: ${people.name}</h4>`;
     items += `<p>RUOLO: ${people.role}</p>`;
-    items += `<img>PICTURE: ${people.picture}</img>`;
+    items += `<img>IMG: ${people.picture}</img>`;
+
+    //! come renderla img????
+    //! items += `<img src="${people.picture}" alt="></img>`;
 
     items += '</li>';
 }
@@ -85,10 +89,33 @@ for (let i = 0; i < profile.length; i++){
 team.innerHTML = items;
 
 
+//Organizzare i singoli membri in card 
+//creo tante card quanti sono i membri
+
+/*const cardContainer = document.querySelector('card-container')
+
+function createCard(name, role){
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    const cardName = document.createElement('h3');
+    cardName.textContent = name;
+
+    const cardRole = document.createElement('p');
+    cardRole.textContent = role;
+
+    card.appendChild(cardName);
+    card.appendChild(cardRole);
+
+    return;
+}*/
+
+
+
+
 //TODO:
 /*
-MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
+
 BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
