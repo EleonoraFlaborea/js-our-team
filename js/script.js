@@ -61,11 +61,15 @@ const profile = [
         picture: 'barbara-ramos-graphic-designer.jpg',
     }
 ]
+//stampo in console tutti i nomi, ruoli e stringa foto
+for (let key in profile){
+   console.log('Name: ',profile[key].name)
+   console.log('Role: ',profile[key].role)
+   console.log('Picture: ',profile[key].picture)
+}
 
 //TODO:
 /*
-MILESTONE 1:
-Stampare su console le informazioni di nome, ruolo e la stringa della foto
 MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1:
